@@ -3,26 +3,119 @@
 # and obtained from the dandiarchive.
 '@context': 
   https://raw.githubusercontent.com/dandi/schema/master/releases/0.7.0/context.json
+about: []
 access:
 - schemaKey: AccessRequirements
   status: dandi:OpenAccess
 assetsSummary:
-  numberOfBytes: 0
-  numberOfFiles: 0
+  approach:
+  - name: electrophysiological approach
+    schemaKey: ApproachType
+  - name: behavioral approach
+    schemaKey: ApproachType
+  dataStandard:
+  - identifier: RRID:SCR_015242
+    name: Neurodata Without Borders (NWB)
+    schemaKey: StandardsType
+  measurementTechnique:
+  - name: analytical technique
+    schemaKey: MeasurementTechniqueType
+  - name: spike sorting technique
+    schemaKey: MeasurementTechniqueType
+  - name: behavioral technique
+    schemaKey: MeasurementTechniqueType
+  numberOfBytes: 148684399888
+  numberOfFiles: 6
+  numberOfSubjects: 2
   schemaKey: AssetsSummary
-citation: Qi, Yitong (2026) Data for "Large-scale electrophysiological mapping relates
-  intrinsic properties to network dynamics in vivo" (Version draft) [Data set]. DANDI
-  Archive. https://dandiarchive.org/dandiset/001960/draft
+  species:
+  - identifier: http://purl.obolibrary.org/obo/NCBITaxon_10090
+    name: Mus musculus - House mouse
+    schemaKey: SpeciesType
+  variableMeasured:
+  - BehavioralTimeSeries
+  - ProcessingModule
+  - Units
+citation: Qi, Yitong; Parot, Vicente; Wu, Xiang; Plutkis, Sarah; Lavis, Luke; Cohen,
+  Adam (2026) Data for "Large-scale electrophysiological mapping relates intrinsic
+  properties to network dynamics in vivo" (Version draft) [Data set]. DANDI Archive.
+  https://dandiarchive.org/dandiset/001960/draft
 contributor:
-- affiliation: []
-  email: andrewqi214@gmail.com
+- affiliation:
+  - name: Harvard University
+    schemaKey: Affiliation
+  email: yitongqi@fas.harvard.edu
   includeInCitation: true
   name: Qi, Yitong
   roleName:
+  - dcite:Author
+  schemaKey: Person
+- affiliation:
+  - name: Universidad Catolica, Santiago
+    schemaKey: Affiliation
+  includeInCitation: true
+  name: Parot, Vicente
+  roleName:
+  - dcite:Author
+  schemaKey: Person
+- affiliation:
+  - name: Harvard University
+    schemaKey: Affiliation
+  includeInCitation: true
+  name: Wu, Xiang
+  roleName:
+  - dcite:Author
+  schemaKey: Person
+- affiliation:
+  - name: Howard Hughes Medical Institute
+    schemaKey: Affiliation
+  includeInCitation: true
+  name: Plutkis, Sarah
+  roleName:
+  - dcite:Author
+  schemaKey: Person
+- affiliation:
+  - name: Howard Hughes Medical Institute
+    schemaKey: Affiliation
+  includeInCitation: true
+  name: Lavis, Luke
+  roleName:
+  - dcite:Author
+  schemaKey: Person
+- affiliation:
+  - name: Harvard University
+    schemaKey: Affiliation
+  email: cohen@chemistry.harvard.edu
+  includeInCitation: true
+  name: Cohen, Adam
+  roleName:
+  - dcite:Supervision
+  - dcite:Author
   - dcite:ContactPerson
   schemaKey: Person
+  url: https://cohenweb.rc.fas.harvard.edu/
 dateCreated: '2026-09-10T19:56:39.091998+00:00'
-description: TODO
+description: 'Simultaneous voltage imaging of ~320 layer 1 interneurons in barrel
+  cortex of awake, head-fixed mice running freely on a treadmill.  Two NDNF-cre::NPY-GFP
+  mice expressing DIO-Voltron-ST-p2a-CheRiff-ST in barrel cortex were imaged at 787
+  Hz (1.27 ms exposure) while blue light was used to stimulate sparse, trial-varying
+  subsets of the same cells. Voltron reports membrane voltage; the co-expressed CheRiff
+  provides optogenetic drive, making each session an all-optical electrophysiology
+  experiment. GFP independently labels the NPY-positive subset, so cell identity is
+  available alongside activity.  Each mouse contributed three sessions:  - Spontaneous
+  activity (10 trials), with no stimulation. - Intrinsic excitability mapping (300
+  trials): four 500 ms steps and one 5 s   ramp delivered to sparse cell subsets,
+  yielding per-cell rheobase, maximum   firing rate, adaptation, after-depolarization
+  and membrane time constant. - Connectivity mapping (640 trials): brief pulses for
+  synaptic connectivity,   with every fourth trial using dense, temporally uncorrelated
+  stimulation   designed for gap-junction mapping.  Every session file contains spike-height-normalized
+  voltage traces, the spike-removed subthreshold component, inferred spike times,
+  per-cell coordinates and intrinsic properties, treadmill running speed, a whisking
+  trace and face movie, and trial and stimulus tables.  A seventh asset provides the
+  raw, unregistered camera movie for four acquisition blocks (24 minutes) of one spontaneous
+  session, together with the motion-correction, demixing and spike-finding products
+  needed to run the full pipeline on it from scratch.'
+ethicsApproval: []
 id: DANDI:001960/draft
 identifier: DANDI:001960
 license:
@@ -31,8 +124,10 @@ manifestLocation:
 - https://api.dandiarchive.org/api/dandisets/001960/versions/draft/assets/
 name: Data for "Large-scale electrophysiological mapping relates intrinsic properties
   to network dynamics in vivo"
+relatedResource: []
 repository: https://dandiarchive.org
 schemaKey: Dandiset
 schemaVersion: 0.7.0
 url: https://dandiarchive.org/dandiset/001960/draft
 version: draft
+wasGeneratedBy: []

@@ -13,6 +13,8 @@ assetsSummary:
     schemaKey: ApproachType
   - name: behavioral approach
     schemaKey: ApproachType
+  - name: microscopy approach; cell population imaging
+    schemaKey: ApproachType
   dataStandard:
   - identifier: RRID:SCR_015242
     name: Neurodata Without Borders (NWB)
@@ -24,8 +26,12 @@ assetsSummary:
     schemaKey: MeasurementTechniqueType
   - name: behavioral technique
     schemaKey: MeasurementTechniqueType
-  numberOfBytes: 148684399888
-  numberOfFiles: 6
+  - name: surgical technique
+    schemaKey: MeasurementTechniqueType
+  - name: one-photon microscopy technique
+    schemaKey: MeasurementTechniqueType
+  numberOfBytes: 505494176572
+  numberOfFiles: 7
   numberOfSubjects: 2
   schemaKey: AssetsSummary
   species:
@@ -36,6 +42,10 @@ assetsSummary:
   - BehavioralTimeSeries
   - ProcessingModule
   - Units
+  - OpticalChannel
+  - OnePhotonSeries
+  - ImagingPlane
+  - PlaneSegmentation
 citation: Qi, Yitong; Parot, Vicente; Wu, Xiang; Plutkis, Sarah; Lavis, Luke; Cohen,
   Adam (2026) Data for "Large-scale electrophysiological mapping relates intrinsic
   properties to network dynamics in vivo" (Version draft) [Data set]. DANDI Archive.
@@ -43,6 +53,9 @@ citation: Qi, Yitong; Parot, Vicente; Wu, Xiang; Plutkis, Sarah; Lavis, Luke; Co
 contributor:
 - affiliation:
   - name: Harvard University
+    schemaKey: Affiliation
+  - identifier: https://ror.org/03vek6s52
+    name: Harvard University
     schemaKey: Affiliation
   email: yitongqi@fas.harvard.edu
   includeInCitation: true
@@ -53,6 +66,10 @@ contributor:
 - affiliation:
   - name: Universidad Catolica, Santiago
     schemaKey: Affiliation
+  - identifier: https://ror.org/03vek6s52
+    name: Harvard University
+    schemaKey: Affiliation
+  identifier: 0000-0002-9261-6667
   includeInCitation: true
   name: Parot, Vicente
   roleName:
@@ -60,6 +77,9 @@ contributor:
   schemaKey: Person
 - affiliation:
   - name: Harvard University
+    schemaKey: Affiliation
+  - identifier: https://ror.org/03vek6s52
+    name: Harvard University
     schemaKey: Affiliation
   includeInCitation: true
   name: Wu, Xiang
@@ -69,6 +89,10 @@ contributor:
 - affiliation:
   - name: Howard Hughes Medical Institute
     schemaKey: Affiliation
+  - identifier: https://ror.org/006w34k90
+    name: Howard Hughes Medical Institute
+    schemaKey: Affiliation
+  identifier: 0009-0003-1822-0466
   includeInCitation: true
   name: Plutkis, Sarah
   roleName:
@@ -77,6 +101,10 @@ contributor:
 - affiliation:
   - name: Howard Hughes Medical Institute
     schemaKey: Affiliation
+  - identifier: https://ror.org/006w34k90
+    name: Howard Hughes Medical Institute
+    schemaKey: Affiliation
+  identifier: 0000-0002-0789-6343
   includeInCitation: true
   name: Lavis, Luke
   roleName:
@@ -85,7 +113,11 @@ contributor:
 - affiliation:
   - name: Harvard University
     schemaKey: Affiliation
+  - identifier: https://ror.org/03vek6s52
+    name: Harvard University
+    schemaKey: Affiliation
   email: cohen@chemistry.harvard.edu
+  identifier: 0000-0002-8699-2404
   includeInCitation: true
   name: Cohen, Adam
   roleName:
@@ -115,7 +147,9 @@ description: 'Simultaneous voltage imaging of ~320 layer 1 interneurons in barre
   raw, unregistered camera movie for four acquisition blocks (24 minutes) of one spontaneous
   session, together with the motion-correction, demixing and spike-finding products
   needed to run the full pipeline on it from scratch.'
-ethicsApproval: []
+ethicsApproval:
+- identifier: 12-18-4
+  schemaKey: EthicsApproval
 id: DANDI:001960/draft
 identifier: DANDI:001960
 license:
@@ -124,7 +158,14 @@ manifestLocation:
 - https://api.dandiarchive.org/api/dandisets/001960/versions/draft/assets/
 name: Data for "Large-scale electrophysiological mapping relates intrinsic properties
   to network dynamics in vivo"
-relatedResource: []
+relatedResource:
+- name: Large-scale all-optical electrophysiology links excitability and connectivity
+    to circuit dynamics in vivo
+  relation: dcite:IsDescribedBy
+  repository: bioRxiv
+  resourceType: dcite:Preprint
+  schemaKey: Resource
+  url: https://doi.org/10.64898/2026.10.05.756595
 repository: https://dandiarchive.org
 schemaKey: Dandiset
 schemaVersion: 0.7.0

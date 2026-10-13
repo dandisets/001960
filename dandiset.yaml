@@ -48,8 +48,8 @@ assetsSummary:
   - PlaneSegmentation
 citation: Qi, Yitong; Parot, Vicente; Wu, Xiang; Plutkis, Sarah; Lavis, Luke; Cohen,
   Adam (2026) Data for "Large-scale electrophysiological mapping relates intrinsic
-  properties to network dynamics in vivo" (Version draft) [Data set]. DANDI Archive.
-  https://dandiarchive.org/dandiset/001960/draft
+  properties to network dynamics in vivo" (Version 0.261013.2016) [Data set]. DANDI
+  Archive. https://doi.org/10.48324/dandi.001960/0.261013.2016
 contributor:
 - affiliation:
   - name: Harvard University
@@ -127,6 +127,7 @@ contributor:
   schemaKey: Person
   url: https://cohenweb.rc.fas.harvard.edu/
 dateCreated: '2026-09-10T19:56:39.091998+00:00'
+datePublished: '2026-10-13T20:16:45.025443+00:00'
 description: 'Simultaneous voltage imaging of ~320 layer 1 interneurons in barrel
   cortex of awake, head-fixed mice running freely on a treadmill.  Two NDNF-cre::NPY-GFP
   mice expressing DIO-Voltron-ST-p2a-CheRiff-ST in barrel cortex were imaged at 787
@@ -147,17 +148,30 @@ description: 'Simultaneous voltage imaging of ~320 layer 1 interneurons in barre
   raw, unregistered camera movie for four acquisition blocks (24 minutes) of one spontaneous
   session, together with the motion-correction, demixing and spike-finding products
   needed to run the full pipeline on it from scratch.'
+doi: 10.48324/dandi.001960/0.261013.2016
 ethicsApproval:
 - identifier: 12-18-4
   schemaKey: EthicsApproval
-id: DANDI:001960/draft
+id: DANDI:001960/0.261013.2016
 identifier: DANDI:001960
 license:
 - spdx:CC-BY-4.0
 manifestLocation:
-- https://api.dandiarchive.org/api/dandisets/001960/versions/draft/assets/
+- https://dandiarchive.s3.amazonaws.com/dandisets/001960/0.261013.2016/assets.yaml
 name: Data for "Large-scale electrophysiological mapping relates intrinsic properties
   to network dynamics in vivo"
+publishedBy:
+  endDate: '2026-10-13T20:16:45.025443+00:00'
+  id: urn:uuid:17bc12ea-5e8d-46f1-83f0-e31ed4b1eccc
+  name: DANDI publish
+  schemaKey: PublishActivity
+  startDate: '2026-10-13T20:16:45.025443+00:00'
+  wasAssociatedWith:
+  - id: urn:uuid:c6feca4d-6933-4116-a39d-b8602f35a3df
+    identifier: RRID:SCR_017571
+    name: DANDI API
+    schemaKey: Software
+    version: 0.1.0
 relatedResource:
 - name: Large-scale all-optical electrophysiology links excitability and connectivity
     to circuit dynamics in vivo
@@ -169,6 +183,6 @@ relatedResource:
 repository: https://dandiarchive.org
 schemaKey: Dandiset
 schemaVersion: 0.7.0
-url: https://dandiarchive.org/dandiset/001960/draft
-version: draft
+url: https://dandiarchive.org/dandiset/001960/0.261013.2016
+version: 0.261013.2016
 wasGeneratedBy: []
